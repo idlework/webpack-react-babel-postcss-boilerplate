@@ -1,0 +1,64 @@
+{
+  "name": "webpack-react-babel-postcss-boilerplate",
+  "version": "0.0.1",
+  "description": "A boilerplate setup which you can use for quick prototyping or a simple website",
+  "scripts": {
+    "lint": "eslint -c .eslintrc app",
+    "start": "webpack-dev-server -d --port 8000 --config conf/webpack-dev.js --progress --hot --inline --no-info",
+    "test": "echo \"Warning: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idlework/webpack-react-babel-postcss-boilerplate.git"
+  },
+  "keywords": [
+    "webpack",
+    "react",
+    "babel",
+    "postcss",
+    "boilerplate"
+  ],
+  "author": "Johan Haneveld <johan.haneveld@gmail.com> (http://johanhaneveld.nl)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/idlework/webpack-react-babel-postcss-boilerplate.git"
+  },
+  "homepage": "https://github.com/idlework/webpack-react-babel-postcss-boilerplate.git",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-eslint": "^6.0.4",
+    "babel-loader": "^6.2.4",
+    "babel-polyfill": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "css-loader": "^0.23.1",
+    "eslint": "^2.11.0",
+    "eslint-config-standard": "^5.3.1",
+    "eslint-config-standard-react": "^2.4.0",
+    "eslint-plugin-promise": "^1.3.1",
+    "eslint-plugin-react": "^5.1.1",
+    "eslint-plugin-standard": "^1.3.2",
+    "html-webpack-plugin": "^2.17.0",
+    "postcss-browser-reporter": "^0.5.0",
+    "postcss-cssnext": "^2.5.2",
+    "postcss-import": "^8.1.2",
+    "postcss-loader": "^0.9.1",
+    "postcss-mixins": "^4.0.2",
+    "postcss-reporter": "^1.3.3",
+    "postcss-url": "^5.1.2",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-hot-loader": "^1.3.0",
+    "react-responsive": "^1.1.3",
+    "sanitize.css": "^3.3.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1",
+    "whatwg-fetch": "^1.0.0"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=5.0 <7",
+    "npm": ">=3.3 <4"
+  }
+}
