@@ -17,4 +17,4 @@ The boilerplate is easily extended with other modules like:
 5. Run development server `npm start`
 
 ## Todo
-* ...
+* Implement distribution settings
