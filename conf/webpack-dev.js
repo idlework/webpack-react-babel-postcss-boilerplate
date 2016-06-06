@@ -17,8 +17,6 @@ const postcssUrl = require('postcss-url')
 
 const CHUNK_VENDOR = 'vendor'
 const appRoot = path.resolve(__dirname, '../app')
-const serverRoot = path.resolve(__dirname, '../server')
-const outputPath = path.resolve(__dirname, '../target')
 const profilePath = path.resolve(__dirname, '../profileTarget')
 const assetsPath = 'assets'
 
@@ -35,10 +33,6 @@ const commonConfig = {
   },
   resolve: {
     extensions: ['', '.js', '.css', '.png', '.svg', '.jpg', '.jpeg', '.gif', '.woff', '.json'],
-    //TODO: what does this do
-    alias: {
-      server: serverRoot
-    },
     root: appRoot
   },
   postcss: postcssConfig
@@ -53,11 +47,10 @@ const commonLoaders = [
   {
     test: /\.(json|conf)$/,
     loader: 'json-loader'
-  },
+  }
 ]
 
 const commonPlugins = [
-  //TODO: what does this do
   new webpack.optimize.CommonsChunkPlugin({
     name: CHUNK_VENDOR
   }),
@@ -108,7 +101,6 @@ function postcssConfig(webpack) {
 }
 
 module.exports = Object.assign({}, commonConfig, {
-  //TODO: what does this do
   output: {
     path: profilePath,
     publicPath: '/',
