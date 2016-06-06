@@ -1,0 +1,16 @@
+{
+  "lang": "en",
+  "locale": "en_US",
+  "author": "Your Name",
+  "url": "example.com",
+  "siteName": "your website's name",
+  "title": "your website's title",
+  "keywords": "your,keywords,here,comma,separated,no,spaces",
+  "description": "150 chars",
+  "subject": "your website's subject",
+  "classification": "business",
+  "googleSiteVerification": "verification_token",
+  "uaTrackingCode": "UA-000000-01",
+  "facebookAppId": "0123456789",
+  "twitterCreatorAccount": "@creator_account"
+}

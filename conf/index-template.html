@@ -1,0 +1,76 @@
+<!doctype html>
+<html class="no-js" lang="<%= htmlWebpackPlugin.options.lang %>">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="keywords" content="<%= htmlWebpackPlugin.options.keywords %>">
+    <meta name="description" content="<%= htmlWebpackPlugin.options.description %>">
+    <meta name="subject" content="<%= htmlWebpackPlugin.options.subject %>">
+    <meta name="robots" content="index,follow,noodp">
+    <meta name="googlebot" content="index,follow">
+    <meta name="google" content="nositelinkssearchbox">
+    <meta name="google-site-verification" content="<%= htmlWebpackPlugin.options.googleSiteVerification %>">
+    <meta name="classification" content="<%= htmlWebpackPlugin.options.business %>">
+    <meta name="url" content="https://<%= htmlWebpackPlugin.options.url %>/">
+    <meta name="directory" content="submission">
+    <meta name="coverage" content="Worldwide">
+    <meta name="distribution" content="Global">
+    <meta name="rating" content="General">
+    <meta name="referrer" content="never">
+
+    <!-- Prefetching, preloading, prebrowsing -->
+    <link rel="dns-prefetch" href="//<%= htmlWebpackPlugin.options.url %>/">
+    <link rel="preconnect" href="https://<%= htmlWebpackPlugin.options.url %>/">
+    <link rel="prefetch" href="https://<%= htmlWebpackPlugin.options.url %>/">
+    <link rel="prerender" href="https://<%= htmlWebpackPlugin.options.url %>/">
+    <link rel="preload" href="<%- require('!file!theme/images/image.png') %>">
+    <!-- More info: https://css-tricks.com/prefetching-preloading-prebrowsing/ -->
+
+    <!-- For IE 10 and below -->
+    <!-- No link, just place a file called favicon.ico in the root directory -->
+
+    <!-- For IE 11, Chrome, Firefox, Safari, Opera -->
+    <link rel="icon" href="<%- require('!file!theme/images/favicon-16.png') %>" sizes="16x16" type="image/png">
+    <link rel="icon" href="<%- require('!file!theme/images/favicon-32.png') %>" sizes="32x32" type="image/png">
+    <link rel="icon" href="<%- require('!file!theme/images/favicon-48.png') %>" sizes="48x48" type="image/png">
+    <link rel="icon" href="<%- require('!file!theme/images/favicon-62.png') %>" sizes="62x62" type="image/png">
+    <!-- More info: https://bitsofco.de/all-about-favicons-and-touch-icons/ -->
+
+    <!-- Facebook share -->
+    <meta property="fb:app_id" content="<%= htmlWebpackPlugin.options.facebookAppId %>">
+    <meta property="og:url" content="https://<%= htmlWebpackPlugin.options.url %>/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<%= htmlWebpackPlugin.options.title %>">
+    <meta property="og:image" content="https://<%= htmlWebpackPlugin.options.url %><%- require('!file!theme/images/image.png') %>">
+    <meta property="og:description" content="<%= htmlWebpackPlugin.options.description %>">
+    <meta property="og:site_name" content="<%= htmlWebpackPlugin.options.siteName %>">
+    <meta property="og:locale" content="<%= htmlWebpackPlugin.options.locale %>">
+    <meta property="article:author" content="<%= htmlWebpackPlugin.options.author %>">
+    <!-- Facebook: https://developers.facebook.com/docs/sharing/webmasters#markup -->
+    <!-- Open Graph: http://ogp.me/ -->
+
+    <!-- Twitter share -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="<%= htmlWebpackPlugin.options.twitterCreatorAccount %>">
+    <meta name="twitter:url" content="https://<%= htmlWebpackPlugin.options.url %>/">
+    <meta name="twitter:title" content="<%= htmlWebpackPlugin.options.title %>">
+    <meta name="twitter:description" content="<%= htmlWebpackPlugin.options.description %>">
+    <meta name="twitter:image" content="https://<%= htmlWebpackPlugin.options.url %><%- require('!file!theme/images/image.png') %>">
+    <!-- More info: https://dev.twitter.com/cards/getting-started -->
+    <!-- Validate: https://dev.twitter.com/docs/cards/validation/validator -->
+
+    <!-- Google+ / Schema.org share -->
+    <meta itemprop="name" content="<%= htmlWebpackPlugin.options.title %>">
+    <meta itemprop="description" content="<%= htmlWebpackPlugin.options.description %>">
+    <meta itemprop="image" content="https://<%= htmlWebpackPlugin.options.url %><%- require('!file!theme/images/image.png') %>">
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+
+  <body>
+    <main id="app"></main>
+  </body>
+
+</html>
