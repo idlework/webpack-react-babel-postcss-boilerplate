@@ -1,0 +1,5 @@
+@import 'theme/styles/colors';
+
+.container {
+  background-color: var(--color-orange);
+}

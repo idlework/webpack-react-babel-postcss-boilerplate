@@ -1,7 +1,9 @@
 require('babel-loader')
 require('css-loader')
+require('json-loader')
 require('postcss-loader')
 
+const appSettings = require('./app-settings.json')
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -47,7 +49,11 @@ const commonLoaders = [
     test: /\.js$/,
     exclude: /node_modules/,
     loader: 'babel-loader?cacheDirectory=true'
-  }
+  },
+  {
+    test: /\.(json|conf)$/,
+    loader: 'json-loader'
+  },
 ]
 
 const commonPlugins = [
@@ -55,13 +61,11 @@ const commonPlugins = [
   new webpack.optimize.CommonsChunkPlugin({
     name: CHUNK_VENDOR
   }),
-  new HtmlWebpackPlugin({
-    template: path.resolve(__dirname, 'template.html'),
+  new HtmlWebpackPlugin(Object.assign({}, appSettings, {
+    template: path.resolve(__dirname, 'index-template.html'),
     inject: 'body',
-    filename: 'index.html',
-    //TODO: create app config to fill head data
-    title: 'test'
-  }),
+    filename: 'index.html'
+  })),
   new webpack.ProvidePlugin({
     'React': 'react',
     'fetch': 'exports?self.fetch!whatwg-fetch'
@@ -82,6 +86,11 @@ const devLoaders = [{
 
 function postcssConfig(webpack) {
   return [
+    postcssImport({
+      path: appRoot,
+      addDependencyTo: webpack, // for HMR
+      glob: true
+    }),
     postcssBrowserReporter(),
     postcssCssnext({
       browsers: 'last 2 versions',
@@ -91,11 +100,6 @@ function postcssConfig(webpack) {
           remove: false // faster if not processing legacy css
         }
       }
-    }),
-    postcssImport({
-      path: appRoot,
-      addDependencyTo: webpack, // for HMR
-      glob: true
     }),
     postcssMixins(),
     postcssReporter(),

@@ -1,0 +1,21 @@
+:root {
+  --font-weight-light: 300;
+  --font-weight-semi-bold: 500;
+  --font-weight-bold: 700;
+  --font-weight-super-bold: 900;
+
+  --font-family-sans: sans-serif;
+  --font-family-serif: serif;
+
+  --font-size-xs: 1.1rem;
+  --font-size-s: 1.3rem;
+  --font-size-m: 1.5rem;
+  --font-size-l: 2rem;
+  --font-size-xl: 2.5rem;
+  --font-size-xxl: 3.6rem;
+
+  --line-height-s: 1.2;
+  --line-height-sm: 1.5;
+  --line-height-m: 1.75;
+  --line-height-l: 2;
+}

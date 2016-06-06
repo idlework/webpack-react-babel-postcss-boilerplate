@@ -1,0 +1,41 @@
+@import 'sanitize.css';
+
+@import 'theme/styles/breakpoints';
+@import 'theme/styles/colors';
+@import 'theme/styles/typography';
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (--viewport-m) {
+    padding: 0 2rem;
+  }
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  font-family: var(--font-family-sans);
+  font-size: 62.5%;
+  overflow-y: scroll;
+}
+
+body {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-light);
+}

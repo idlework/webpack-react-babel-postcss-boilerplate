@@ -1,0 +1,11 @@
+:root {
+  --breakpoint-s: 360px;
+  --breakpoint-m: 768px;
+  --breakpoint-l: 960px;
+  --breakpoint-xl: 1170px;
+}
+
+@custom-media --viewport-s all and (min-width: 360px);
+@custom-media --viewport-m all and (min-width: 768px);
+@custom-media --viewport-l all and (min-width: 960px);
+@custom-media --viewport-xl all and (min-width 1170px);
